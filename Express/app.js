@@ -1,4 +1,4 @@
-const express = require("../node_modules/express")     //Will return a function
+const express = require("express")     //Will return a function
 const app = express()
 const port = 80;
 

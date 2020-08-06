@@ -8,5 +8,8 @@
   },
   "author": "Ujjwal Pandey",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
 }
