@@ -1,0 +1,17 @@
+{
+  "name": "tut69",
+  "version": "1.0.0",
+  "description": "this is npm 1",
+  "main": "tut69.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "awosm"
+  ],
+  "author": "ujjwal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

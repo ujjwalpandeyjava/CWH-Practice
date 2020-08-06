@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Introduction</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <h1>Open console to see all work of this file.</h1>
+    <div id="content"></div>
+
+</body>
+<Script>
+    // tut 49
+    /* var str1 = "This is string-1"
+     var str2 = 'This is string-2'
+     var str3 = new String("This is String-3")
+     console.log(str1 +"\n" +str2 +"\n" +str3)
+     var fName = "Ujjwal"
+     var lName = 'Pandey'
+     var add = `S.V. New Delhi 110080`
+     var msg = `${fName} ${lName} is an 'osm' guy with address "${add}"` 
+     // use `` whe you need to use '' and "" both in a string
+     console.log(msg)
+     var len = msg.length;
+     console.log( "The length of string 'msg' (just used) is " +len)
+     console.log( `This is the only way to use this doller use to show the var values with back-ticks eg:- ${len}`)
+     // giving console and next line comand and how to use escape.
+     var xx = ` U\n new line \n new line \\n escape used`
+     console.log(xx)
+     // inserting Element
+     document.getElementById("content").innerHTML = "<h3>This h3 is inseted by js code on execution.</h3>"
+         */
+
+    // tut 50
+    /* var str1 = "This is a is String"
+     console.log(str1)
+     var firstPosition  = str1.indexOf('is')
+     var lastPosition  = str1.lastIndexOf('is')
+     // first occurance of subString
+     console.log(firstPosition)
+     // last occurance of subString
+     console.log(lastPosition)
+ 
+     //Substring from a string
+     var substr1 = str1.slice(1,6)       //can take -ve value also based n index value
+     var substr2 = str1.substring(1,6)   // can't take -ve value based n index value
+     var substr3 = str1.substr(1,6)   // can take -ve value based n no. of value
+     var substr4 = str1.replace("a", "man")   // return new string an replace only first one.
+     console.log(substr1)
+     console.log(substr2)
+     console.log(substr3)
+     console.log("Normal string: " +str1)
+     console.log("Change: " +substr4)
+ 
+     console.log(str1.toUpperCase())
+     console.log(str1.toLowerCase())
+ 
+     stringWithWhiteSpaces = "   This    contains many      spaces    .   "
+     console.log(stringWithWhiteSpaces)
+     console.log(stringWithWhiteSpaces.trim() +'trim() trims white spaces from end and start only')
+ 
+     num = 13
+     var char3 = str1.charAt(num)
+     console.log(char3)//Return's char at this location.
+     console.log(str1.charCodeAt(num) +' This is the utf code of char at specified location ')//Return's char at this location.
+         */
+    //tut 51 Scope
+    /*        // difference between let and var
+            //var throughout the fun not block but let is 
+            //otherewise they are same
+            let a = 'let'
+            var b = "var"
+            console.log(a)
+            console.log(b)
+            function aa() {
+                let a = 'let in function'
+                var b = "var in function"
+                console.log(a)
+                console.log(b)
+            } aa()
+            console.log(a)
+            console.log(b)
+            {
+                let a = 'let in block'
+                var b = "var in block"
+                console.log(a)
+                console.log(b)
+            }
+            console.log(a)  //Treat's a block as like a function in terms of accesing value.
+            console.log(b)  //
+    
+            //Cosnstant (const)
+            const cnd = "this is a constant"
+            console.log(cnd)
+            try {
+                 cnd = "this is a constant can't be changed"            
+            } catch (error) {
+                console.log("cant change const value \n" +error)
+            }
+            */
+    //tut 52 Array & Objects
+    /*    let myVar = 34;
+        let myVar2 = "string";
+        let myVar3 = true;
+        let myVar4 = null;
+        let myVar5 = undefined;
+
+        let employee = {
+            fName: "Ujjwal",
+            lName: "Pandey",
+            salary: 200000,
+            channel: "let learn",
+            "channel 2": "Programming With Ujjwal",//Must use quotes if space is used in name
+        }
+        console.log(employee);
+        console.log(employee['channel 2']);
+
+        let names = [1, 2, 4, "Harry", undefined];
+        let names = new Array(41, 2, 4, "Harry", undefined);
+        let names = new Array(23);//array with length still dynamic
+        console.log(names.length);
+        names = names.sort();
+        names.push("this is pushed");
+        console.log(names);
+ */
+    //tut53 Functions
+    function nameCalling(name, anotherText = " This is default value.") {
+        console.log(name + " is a good boy");
+        console.log(name + anotherText)
+    } //function
+    /* 
+        let name1 = 'Ujjwal'//usable values
+        let name2 = 'Rahul'
+        let name3 = 'Nishant'
+        let name4 = 'Suraj'
+        anotherText = " Good morning bro..."
+        nameCalling(name1, anotherText)//Calling
+        nameCalling(name2, anotherText)
+        nameCalling(name3, anotherText)
+        nameCalling(name4, anotherText)
+        nameCalling(name1) */
+
+    //tut54 Interaction using alert, prompt and confirm.
+
+    // alert("Hii this is alert message")  //kind of modal. do not return anything.
+    /*let name = prompt("What is your name?", "Guest") //Guest is the default value of textbox in prompt
+    console.log(name)*/
+    /* let deletePost = confirm("Do you really want to delete")
+     console.log(deletePost) //returns tur false
+     //To delete / get a confirmatin / double check.*/
+
+    //tur55 all loops
+
+    // let i = 0;
+    // for(i=0; i<3;i++){
+    //     console.log(i);
+    // }
+
+    //itration of anything.
+    let friends = ["Rohan", "Sanjeev", "Deepti", "Pooja", "Skill"];
+    /*for-loop
+    for (let index = 0; index < friends.length; index++) {
+        console.log("Hello friend, " + friends[index]);
+    }*/
+
+    /*//forEach loop
+    friends.forEach(function f(element){
+        console.log("Hello Friend, " + element + " to modern JavaScript");
+    });*/
+
+    /*//for-of loop
+     for (element of friends){
+         console.log("Hello Friend, " + element + " to modern JavaScript again");
+     }*/
+
+    //Object itreation
+    let employee = {
+        name: "Harry",
+        salary: 2000,
+        channel: "CWH"
+    }
+
+    /*// Use this loop to iterate over objects in JavaScript
+    //for-in loop to get key value.
+    for(key in employee){
+        console.log(`The ${key} of employee is ${employee[key]}`);
+    }*/
+
+    /*   // while loop
+      let i =0;
+      while(i<4){
+          console.log(`${i} is less than 4`);
+          i++;
+      } */
+
+    /*  // do while loop in js
+     let j =34;
+     do{
+         console.log(`${j} is less than 4 is false stil, we are inside do while loop`);
+         j++;
+     }while(j<4); */
+</Script>
+
+</html>

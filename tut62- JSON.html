@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <div class="container">This is my container</div>
+    <script>
+        let jsonObj = {
+            name: "Ujjwal",
+            channel: "get set ready",
+            friend: "Suraj vikas",
+            food: "Soyabean" //#bhindiLoverSquad
+        } 
+        console.log(jsonObj);
+
+        //JSON Object to String. After conversion we can use any string function on it.
+        let myJsonStr = JSON.stringify(jsonObj);
+        console.log(myJsonStr);
+
+        //replace 1st value with 2nd one.
+        myJsonStr = myJsonStr.replace('Ujjwal', 'Larry');
+        console.log(myJsonStr)
+
+        //String to JSON Object. must be an valid JSON string
+        newJsonObj = JSON.parse(myJsonStr);
+        console.log('String back to Json object')
+        console.log(newJsonObj)
+        
+        console.log('String back to Json object' +newJsonObj)//wrong way
+
+        
+
+
+    </script>
+</body>
+</html>

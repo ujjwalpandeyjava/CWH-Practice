@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events</title>
+</head>
+<style>
+    #btn {
+        padding: 10px 14px;
+        background-color: rgb(238, 93, 93);
+        border: 2px solid black;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>This is my heading </h1>
+        <p id="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut rem quidem quaerat eos minima, neque
+            sapiente ipsam debitis tempore quae sequi autem sunt ea cupiditate? Saepe corporis, laboriosam facere
+            distinctio sint qui unde ipsam molestias officiis totam ullam id illum iusto accusantium dicta aspernatur
+            tempore atque rerum optio consectetur similique ad culpa veritatis. Dolores atque fuga, dignissimos vel
+            velit minus, necessitatibus ipsum culpa recusandae architecto repellendus harum voluptatem placeat fugiat
+            blanditiis minima temporibus vero quasi consectetur odio. Dignissimos veniam ad recusandae nemo quam quia
+            eligendi. Cumque similique ut enim pariatur hic blanditiis reprehenderit maiores quibusdam ratione quisquam
+            beatae laborum aperitum nostrum quasi, sit odio aut quas quia minus rerum
+            accusamus suscipit ex maiores commodi. Ipsum quisquam quo ab modi vitae animi eaque!</p>
+    </div>
+    <button id="btn" onclick="toggleHide()">Show/Hide</button>
+
+<script>
+        //tut57  event and event handling
+        /*        let para = document.getElementById('para');
+               para.addEventListener('mouseover', function run() {
+                   console.log('Mouse Inside')
+               });
+       
+               para.addEventListener('mouseout', function run() {
+                   console.log('Mouse now went outside')
+               });
+       
+       
+               function toggleHide() {
+                   // let btn = document.getElementById('btn');
+                   let para = document.getElementById('para');
+                   if (para.style.display != 'none') {
+                       para.style.display = 'none';
+                   }
+                   else {
+                       para.style.display = 'block';
+                   }
+               } */
+
+        //tut58 JavaScript set/clearTimeOut and set/clearInterval
+        /*         // var timeoutValue = setTimeout(function a(){}, timeout [,all parameters of fun a()]);    //Runs only once
+                // var timeoutValue = setTimeout(() => {   }, timeout);    
+                //     clearTimeout(timeoutValue)
+                //     var intervalValue = setInterval(function a(){}, timeout [,all parameters of fun a()])   //Runs after every given timeout.
+                // var intervalValue = setInterval(() => { }, interval);   
+                //     clearInterval(intervalValue)
+         */
+
+//tut 60 Arrow functions.
+     //normal function
+        function greet() {
+            console.log('Good morning');
+        }
+/*   // Arrow function
+        let greet = () => {
+            console.log('Good morning');
+        }
+    //more shortcut in arrow function
+        let greet = () => console.log('Good morning');
+
+
+    //Normal function with parameters.
+        function sum1(a, b) {
+            return a + b;
+        }
+    //Arrow function with parameters.   
+        let sum2 = (a, b) => {
+            return a + b;
+        };
+    //More shortcut in Arrow function with parameters.   
+        let sum2 = (a, b) => a + b;
+        let half = (a) => a / 2;
+                //or
+        let half = a => a / 2;
+        
+        greet();
+    setTimeout(() => {
+        console.log("We are inside settimeout");
+    }, 3000);
+    
+    let obj1={
+        greeting: "Good Morning",
+        names: ["ujjwal", "Pandey", "Suraj", "Vikas"],
+        speak(){
+            this.names.forEach((student) =>{//can't use 'this' if used this will not work
+            console.log(this.greeting +" bhai " +student);
+        });
+    }
+}
+obj1.speak();
+*/
+
+// tut61 Math Object in JavaScript
+    /*// all function on Math Object
+    console.log(Math)
+    // Printing the Math Object
+    let m = Math;
+    console.log(m)
+
+    // Printing the constants from Math Object
+console.log("The value of Math.E is ", Math.E)
+console.log("The value of Math.PI is ", Math.PI)
+console.log("The value of Math.LN2 is ", Math.LN2)
+console.log("The value of Math.SQRT1_2 is ", Math.SQRT1_2)
+console.log("The value of Math.LOG2E is ", Math.LOG2E)
+
+// Printing the Functions from Math Object 
+let a = 34.64534;
+    let b = 89;
+    
+    console.log("The value of a and b is ", a, b);
+    console.log("The value of a and b rounded is ", Math.round(a), Math.round(b));
+    
+    console.log("3 raised to the power of 2 is ", Math.pow(3, 2)) 
+    console.log("2 raised to the power of 12 is ", Math.pow(2, 12)) 
+    console.log("1 raised to the power of 2 is ", Math.pow(1, 2)) 
+    
+    console.log("Square root of 36 is ", Math.sqrt(36)) 
+    console.log("Square root of 64 is ", Math.sqrt(64)) 
+    console.log("Square root of 50 is ", Math.sqrt(50)) 
+    
+    // Ceil and floor
+    console.log("5.8 rounded up to nearest integer is ", Math.ceil(5.8)) 
+    console.log("5.8 rounded down to nearest integer is ", Math.floor(5.8)) 
+
+    // Abs function
+    console.log("Absolute value of 5.66 is  ", Math.abs(5.66)) 
+    console.log("Absolute value of -5.66 is  ", Math.abs(-5.66))
+
+    // Trinonometric Functions
+    console.log("The value of sin(90deg) is ", Math.sin(90*Math.PI/180 ))//Takes in radian not in degree.
+    console.log("The value of cos(0deg) is ", Math.cos(0*Math.PI/180 ))//Angle in radians=(angle in degrees)*PI/180.
+    console.log("The value of tan(45deg) is ", Math.tan(45*Math.PI/180 ))//Angle in degrees is normal integer.
+
+    // Min and max functions
+    console.log("Minimum value of 4, 5, 6 is ", Math.min(4,5, 6));
+    console.log("Minimum value of 14, 5, 16 is ", Math.min(14,5, 16));
+    console.log("Maximum value of 4, 5, 6 is ", Math.max(4,5, 6));
+    console.log("Maximum value of 14, 5, 16 is ", Math.max(14,5, 16));
+    
+    // Generating a random number
+    let r = Math.random();
+    // Random number b/w (a, b) = a + (b-a)*Math.random()
+    let a1 = 50;
+    let b1 = 60;
+    let ra1_b1 = a1 + (b1-a1)*Math.random();
+    console.log("The random number is ", r)
+    console.log("The random number is ", ra1_b1)
+*/
+    
+
+    
+    
+    
+    
+    
+    
+    
+</script>
+</body>
+
+</html>
