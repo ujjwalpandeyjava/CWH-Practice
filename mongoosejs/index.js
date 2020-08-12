@@ -1,3 +1,11 @@
+/*
+    Mongodb = database
+    mongod = process to let database used by any tech
+    mongoose =  A library to let nodejs app use monog database.
+    powershell = one of the tech to use mongo database.
+    Different tech which can use 'noSQL' monogo database:- powershell of pc, mongoose, python libraies, java app lib, etc.
+*/
+
 // getting-started.js
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/database1', { useNewUrlParser: true, useUnifiedTopology: true });
@@ -23,9 +31,12 @@ kittySchema.methods.speak = function () {
         : "I don't have a name";
     console.log(greeting);
 }
+
+
 //Constant (we created a model.)
 const Kitten = mongoose.model('Kitten', kittySchema);
 //Name of collection is the pural form of name given to object in the database mentioned while connecting.
+
 
 //Different objects to save in database.
 const silence = new Kitten({ name: 'Silence' });
