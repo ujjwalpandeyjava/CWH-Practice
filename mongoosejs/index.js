@@ -44,3 +44,14 @@ silence.save(function (err, s) {
     if (err) return console.error(err);
     s.speak();
 });
+
+
+
+//Find in the collection
+Kitten.find(function (err, kittens) {
+    if (err) return console.error(err);
+    console.log(kittens);
+});
+
+//Finding with a callback: can be function, value, obj,  anything.
+Kitten.find({ name: /^fluff/ }, callback);
