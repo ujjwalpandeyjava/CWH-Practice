@@ -1,5 +1,6 @@
 // Custom backend means serving files as according to the need or asked
 //before starting server go into the directory of file with the help of cd and than run the .js file.
+//Not good practice
 
 const hostname = '127.0.0.1';
 const port = 3000;
@@ -28,16 +29,15 @@ const server = http.createServer((req, res) => {
         res.statusCode = 404;
         res.end("<h1>404 Page not found</h1>\ncreate a new page for page not found")
     }
-
-
 });
 
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
-}); 
+});
 
 /*What to do----
-    crerate server:-  contains http, req ans res 
-    and listen server:- contains port and hostname as parameter and 3rd para function to print anything.
+    crerate server:-  contains http, req ans res
+    and
+    listen server:- contains port and hostname as parameter and 3rd para function to print anything.
         We can even use post, get and others too.
 */
