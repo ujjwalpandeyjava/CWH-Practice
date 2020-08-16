@@ -1,10 +1,10 @@
 //Good practice of nodejs backend.
 
-const http = require("http")    //server services
-const fs = require("fs")        //File services
 const express = require("express")
-const app = express()
+const app = express()//must fo
+
 const path = require("path");
+const fs = require("fs")        //File services
 const host = "localhost";
 const port = 80;
 
