@@ -3,8 +3,8 @@
 const http = require("http")    //server services
 const fs = require("fs")        //File services
 const express = require("express")
-const path = require("path");
 const app = express()
+const path = require("path");
 const host = "localhost";
 const port = 80;
 

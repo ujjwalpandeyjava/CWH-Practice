@@ -1,6 +1,7 @@
 // Custom backend means serving files as according to the need or asked
 //before starting server go into the directory of file with the help of cd and than run the .js file.
-//Not good practice
+
+/* //Not good practice*/
 
 const hostname = '127.0.0.1';
 const port = 3000;

@@ -1,4 +1,4 @@
-const http = require("http");;
+const http = require("http");
 const express = require('express');
 const app = express();
 const fs = require("fs");
@@ -26,9 +26,11 @@ app.get('/services', (req, res) => {res.end(services);
 app.get('/about', (req, res) => {res.end(about);
     res.send("This is Contact page by express. with get method.");
 });
-app.post('/contact', (req, res) => {re
+app.post('/contact', (req, res) => {
     res.end(contact);
-
+    let name = req.body.name;
+    let desc = req.body.desc;
+    console.log(name +desc);
 
 
     req.send("This is Contact page by express. with post method.");
