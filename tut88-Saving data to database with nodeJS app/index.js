@@ -15,16 +15,16 @@ let about = fs.readFileSync('./about.html') //File to read
 
 //Navigations.
 app.get('/', (req, res) => {res.end(index);
-    // req.send("This is Contact page by express. with get method.");
+    // res.send("This is Contact page by express. with get method.");
 });
 app.get('/index', (req, res) => {res.end(index);
-    req.send("This is Contact page by express. with get method.");
+    res.send("This is Contact page by express. with get method.");
 });
 app.get('/services', (req, res) => {res.end(services);
-    req.send("This is Contact page by express. with get method.");
+    res.send("This is Contact page by express. with get method.");
 });
 app.get('/about', (req, res) => {res.end(about);
-    req.send("This is Contact page by express. with get method.");
+    res.send("This is Contact page by express. with get method.");
 });
 app.post('/contact', (req, res) => {re
     res.end(contact);

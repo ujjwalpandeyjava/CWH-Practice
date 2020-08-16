@@ -1,4 +1,5 @@
-/* // console.log('hello bro..')
+// console.log('hello bro..')
+//Only express.
 const http = require('http');
 
 const hostname = '127.0.0.1';
@@ -7,6 +8,7 @@ const port = 3000;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/html');
+  //Instead of full html code we can read a html file and then pass an instance of it in this end().
   res.end(` <!DOCTYPE html>
   <html lang="en">
   
@@ -83,7 +85,7 @@ server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
 
-*/
+
 /* //This is the code to createa a new server.......
 const http = require('http');
 
