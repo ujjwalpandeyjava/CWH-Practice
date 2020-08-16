@@ -1,6 +1,6 @@
 /*
     Mongodb = database
-    mongod = process to let database used by any tech
+    mongod = Main process to let database used by any tech
     mongoose =  A library to let nodejs app use monog database.
     powershell = one of the tech to use mongo database.
     Different tech which can use 'noSQL' monogo database:- powershell of pc, mongoose, python libraies, java app lib, etc.
@@ -18,6 +18,7 @@ db.once('open', function () {
     console.log("WE are connected!!")
 });
 
+
 //(Createda a schema.) Helps us to define the database what to enter and what to restricts.
 const kittySchema = new mongoose.Schema({
     name: String
@@ -33,17 +34,19 @@ kittySchema.methods.speak = function () {
 }
 
 
-//Constant (we created a model.)
+//Constant (we created a model.) model is final compiled schema.
 const Kitten = mongoose.model('Kitten', kittySchema);
 //Name of collection is the pural form of name given to object in the database mentioned while connecting.
 
 
 //Different objects to save in database.
+//These objects will be used a documents
 const silence = new Kitten({ name: 'Silence' });
 console.log(silence.name); // 'Silence'
 
 const fluffy = new Kitten({ name: 'fluffy' });
 fluffy.speak(); // "Meow name is fluffy"
+
 
 //Saves
 //must use new object for every object.
@@ -63,6 +66,5 @@ Kitten.find(function (err, kittens) {
     if (err) return console.error(err);
     console.log(kittens);
 });
-
 //Finding with a callback: can be function, value, obj,  anything.
 Kitten.find({ name: /^fluff/ }, callback);
