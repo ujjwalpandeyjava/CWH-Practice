@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>HTML in PUG</title> -->
+    <title>#{title}</title>
+    style
+        include ../static/style.css
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact us</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <!-- <p>
+            |            '|' This is pipie used to show multiple lines of different tech based codes.
+            | #{base} ||
+            | Hey.. This is HTML in PUG.
+        </p> -->
+        <form action="/indexHTML" method="post" id="contactUsForm">
+            <h1>Address details for order delivery</h1>
+            <a>Name :</a><br><input type="text" name="name" id="name" placeholder="Enter name">
+            <a>E-mail: </a><br><input type="email" name="email" id="email" placeholder="Enter E-mail id">
+            <a>Address: </a><br><input type="text" name="address" id="address" placeholder="Enter address">
+            <a>Address description: </a><br><textarea name="desc" id="desc" rows="6" placeholder="Some landmarks (Optional)."></textarea>
+            <input type="submit" value="Submit" id="formSubmit" onmouseup="dataSubmitted()">
+        </form>
+    </div>
+    script
+        include ./function.js
+</body>
+
+</html>
