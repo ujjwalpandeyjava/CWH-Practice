@@ -4,6 +4,8 @@ const app = express();
 const fs = require("fs");
 const hostname = "localhost";
 const port = 3000;
+//Bad practice
+
 
 
 //pages tp navigate.
