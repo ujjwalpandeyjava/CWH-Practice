@@ -5,12 +5,16 @@
     powershell = one of the tech to use mongo database.
     Different tech which can use 'noSQL' monogo database:- powershell of pc, mongoose, python libraies, java app lib, etc.
 */
-
-// getting-started.js
+/*
+    1). Getting started and npm install body-parser
+    2). Create Schema
+    3). Create model
+    4). Create object of Model
+    5). Save in database
+*/
+// 1). Getting-started.js
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/database1', { useNewUrlParser: true, useUnifiedTopology: true });
-
-
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
@@ -19,7 +23,7 @@ db.once('open', function () {
 });
 
 
-//(Createda a schema.) Helps us to define the database what to enter and what to restricts.
+// 2). Createda a schema - Helps us to define the database what to enter and what to restricts.
 const kittySchema = new mongoose.Schema({
     name: String
 });
@@ -34,29 +38,29 @@ kittySchema.methods.speak = function () {
 }
 
 
-//Constant (we created a model.) model is final compiled schema.
+// 3). Created a model - model is final compiled schema.
 const Kitten = mongoose.model('Kitten', kittySchema);
 //Name of collection is the pural form of name given to object in the database mentioned while connecting.
 
 
-//Different objects to save in database.
+// 4). Create Obect - different objects to save in database.
 //These objects will be used a documents
 const silence = new Kitten({ name: 'Silence' });
-console.log(silence.name); // 'Silence'
+console.log(silence.name); // 'Silence' in console.log
 
 const fluffy = new Kitten({ name: 'fluffy' });
 fluffy.speak(); // "Meow name is fluffy"
 
 
-//Saving
+// 5). Saving in database
 //must use new object for every object.
-fluffy.save(function (err, fluffy) {
-    if (err) return console.error(err);
-    fluffy.speak();
-});
 silence.save(function (err, s) {
     if (err) return console.error(err);
     s.speak();
+});
+fluffy.save(function (err, fluffy) {
+    if (err) return console.error(err);
+    fluffy.speak();
 });
 
 
