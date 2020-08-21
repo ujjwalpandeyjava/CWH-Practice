@@ -1,22 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Style.css">
-    <title>Apply</title>
-</head>
-<body>
-    <nav id="navbar">
-        <div class="navbar">
-            <ul>
-                <li class="li"><a href="/">Home</a></li>
-                <li class="li"><a href="/apply">Apply</a></li>
-                <li class="li"><a href="/class_info">Class info</a></li>
-                <li class="li"><a href="#sponsers">Sponsers</a></li>
-                <li class="li"><a href="/Contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-</body>
-</html>
+extends extenderBase.pug
+
+block style
+    style
+        include ../static/StyleClasses.css
+block content
+    h1.h1 Class timings
+    div#classesTiming 
+        div
+            h2 Morning classes
+            div.eachTiming
+                div 10:00 am -- 11:00 pm
+                div 11:30 am -- 01:00 pm
+                div 01:30 pm -- 3:00 pm 
+                    i (new batch)
+        div
+            h2 Evening classes
+            div.eachTiming
+                div 3:30 pm -- 5:00 pm
+                div 05:30 pm -- 07:00 pm
+                div 7:30 pm -- 9:00 pm
+
+    div#newBatchSoon(style="font-size:23px; font-family:Yeon Sung") New batches soon

@@ -1,22 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Style.css">
-    <title>Contact Us</title>
-</head>
-<body>
-    <nav id="navbar">
-        <div class="navbar">
-            <ul>
-                <li class="li"><a href="/">Home</a></li>
-                <li class="li"><a href="/apply">Apply</a></li>
-                <li class="li"><a href="/class_info">Class info</a></li>
-                <li class="li"><a href="#sponsers">Sponsers</a></li>
-                <li class="li"><a href="/Contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-</body>
-</html>
+extends extenderBase.pug
+
+block style
+    style
+        include ../static/StyleContact.css
+block content
+    h1.h1 Contact
+    div#contact-box
+        form(action='/Contact' method="post")
+            .form-group
+                label(for='name') Name: 
+                input#name(type='text' name='name' placeholder='Enter your name')
+            .form-group
+                label(for='e-main-id') E-mail: 
+                input#e-main-id(type='email' name='e-main-id' placeholder='Enter your e-mail id')
+            .form-group
+                label(for='e-main-id') Phone no: 
+                input#tele-no(type='tel' name='phn_no' placeholder='Enter contact number')
+            .form-group
+                label(for='e-main-id') Message: 
+                textarea#message( name='concern' rows='7' cols='20' placeholder='Enter some message')
+            input(type='submit' value='Submit' id="submitButton")
+
