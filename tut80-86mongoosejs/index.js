@@ -1,9 +1,9 @@
 /*
     Mongodb = database
     mongod = Main process to let database used by any tech
-    mongoose =  A library to let nodejs app use monog database.
-    powershell = one of the tech to use mongo database.
-    Different tech which can use 'noSQL' monogo database:- powershell of pc, mongoose, python libraies, java app lib, etc.
+    mongoose =  A library to let nodejs app use mongo database.
+    powershell/compass = one of the tech to use mongo database.
+    Different tech which can use monogo database:- powershell of pc, mongoose, python libraies, java app lib, etc.
 */
 /*
     1). Getting started and npm install body-parser
